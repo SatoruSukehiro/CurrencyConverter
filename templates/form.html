@@ -1,0 +1,37 @@
+{%extends "main.html"%}
+
+
+{%block content%}
+<div class='container'>
+    <div class='row'>
+        
+        <form action="/convert">
+            <h1 class="text-center">Currency Converter</h1>
+            <div class="mb-3">
+                <label class="form-label" for="currency1">Converting From:</label>
+                <input class="form-control" type="text" name="currency1" id="" maxlength="3">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="currency2">Converting To:</label>
+                <input class="form-control" type="text" name="currency2"id="" maxlength=3>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="amount">Amount:</label>
+                <input class="form-control" type="number" name="Amount" id="">
+                
+            </div>
+            <input type="submit" value="Convert">
+                <div class="mt-3">
+                    {%for msg in get_flashed_messages()%}
+                        <h2>{{msg}}</h2>
+                    {%endfor%}
+                </div>
+                
+               
+    
+        </form>
+    </div>
+</div>
+
+
+{%endblock%}
